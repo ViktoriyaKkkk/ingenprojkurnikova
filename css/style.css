@@ -1,0 +1,143 @@
+body,
+html {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.head-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 11px 14vw 100px 15vw;
+  align-content: center;
+}
+.head-container_item {
+  font-weight: "Nunito";
+  font-weight: 400;
+  font-weight: bold;
+}
+.head-container_item:first-child {
+  font-size: 36px;
+  color: #3e3f43;
+}
+.head-container_item:last-child {
+  display: block;
+  font-size: 16px;
+  color: #3e3f43;
+  width: 137px;
+  height: 40px;
+  line-height: 38px;
+  background: #ddcae0;
+  border: 1px solid #3e3f43;
+  text-align: center;
+  border-radius: 8px;
+}
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.menu-container_item {
+  color: rgba(34, 34, 34, 0.75);
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 50px;
+  margin-right: 48px;
+}
+.menu-container_item:last-child {
+  margin-right: 0;
+}
+
+.selected {
+  font-weight: 800;
+  color: #20c4da;
+}
+a {
+  text-decoration: none;
+}
+.fon-figure_1 {
+  position: absolute;
+  width: 370px;
+  height: 100vh;
+  right: 0px;
+  top: 0px;
+  background: rgba(222, 211, 226, 0.58);
+  z-index: -1;
+  border-radius: 0 0 0 150px;
+}
+.main_screen_h2 {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 49px;
+  margin-bottom: 16px;
+}
+.main_screen_h1 {
+  font-size: 72px;
+  line-height: 98px;
+  margin: 0 0 16px 0;
+}
+.main_screen {
+  width: 504px;
+  position: relative;
+  margin-left: 20vw;
+  margin-bottom: 325px;
+}
+.main_screen_pic {
+  position: absolute;
+  left: 314px;
+  top: -30px;
+}
+.main_screen_but {
+  width: 175px;
+  height: 50px;
+  background: #9fbbc7;
+  border-radius: 4px;
+  color: #ffffff;
+  line-height: 50px;
+  text-align: center;
+}
+.second-screen_line {
+  width: 316px;
+  height: 0;
+  size: 5;
+  background-color: black;
+  margin: 0;
+  float: left;
+  margin-top: 70px;
+}
+.second-screen {
+  width: 70vw;
+  height: 120px;
+  display: flex;
+  margin: auto;
+}
+.second-screen_h2 {
+  line-height: 98px;
+  display: inline-block;
+  font-size: 36px;
+  margin-right: 20px;
+}
+
+.second-screen_h1 {
+  line-height: 98px;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 72px;
+  margin-left: 20px;
+  color: rgba(74, 30, 70, 0.32);
+}
+.fon-figure_2 {
+  position: absolute;
+  width: 278px;
+  height: 388px;
+  background: #faddfb;
+  left: 10vw;
+  top: 160px;
+  z-index: -1;
+  border-radius: 0 150px 0 150px;
+}
+.aboutus {
+  position: relative;
+}
