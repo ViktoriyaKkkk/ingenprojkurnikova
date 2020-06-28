@@ -47,6 +47,7 @@
                 <a href="#">
                     <div class="main_screen_but">Explore Furniture</div>
                 </a>
+            </div>
         </section>
 
         <section class="aboutus">
@@ -59,7 +60,7 @@
             <img src="img/tumba1.png" alt="tubma kalmar" class="aboutus_pic">
             <div class="aboutus_info">
                 <h2 class="aboutus_info_h2"><b>mébel</b> is the <b>home of modern wooden furniture</b></h2>
-                <h3 class="aboutus_info_h3">the answer to your need for furniture with shapes, sizes and colors.
+                <h3 class="aboutus_info_h3">The answer to your need for furniture with shapes, sizes and colors.
                 </h3>
             </div>
             <div class="aboutus_info-second">
