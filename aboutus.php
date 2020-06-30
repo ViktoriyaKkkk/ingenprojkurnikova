@@ -25,6 +25,11 @@
     </header>
 
     <main>
+    <div class="second-screen">
+                <h2 class="second-screen_h2">Who we are</h2>
+                <hr class="second-screen_line">
+                <h1><a href="#" class="second-screen_h1">ABOUT US</a></h1>
+            </div>
         <div class="main_providers">
 <h2>Our online store cooperates with such suppliers as:</h2>
 <?php 

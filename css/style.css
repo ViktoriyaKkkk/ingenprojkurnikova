@@ -352,8 +352,8 @@ tr td:last-child {
 .head-container_aboutus {
   margin-bottom: 20px;
 }
-.howitworks{
-  width:75vw;
+.howitworks {
+  width: 1050px;
   margin: auto;
 }
 .howitworks_h1,
@@ -372,7 +372,6 @@ tr td:last-child {
   color: rgba(65, 27, 61, 0.603);
 }
 form {
-  
   font-family: "Nunito", sans-serif;
   width: 300px;
   padding: 20px;
@@ -392,7 +391,7 @@ label {
   height: 25px;
   margin-bottom: 20px;
 }
-.leave-req{
+.leave-req {
   text-align: center;
   color: #a1a1a1;
   margin: 0 auto 10px;
@@ -407,14 +406,14 @@ label {
   outline: none;
   margin: auto;
   border: unset;
-  background-color:  #569da750;
+  background-color: #569da750;
   box-shadow: inset 2px 2px 5px gray, inset -5px -5px 10px white;
 }
-.form_h3{
+.form_h3 {
   display: block;
   margin-left: 50px;
 }
-.edit_req{
+.edit_req {
   margin-bottom: 80px;
 }
 
@@ -665,4 +664,48 @@ label {
   .column-head {
     font-size: 24px;
   }
+}
+/* версия для печати страницы About Us */
+@media print {
+  .head-container_item:nth-child(2),
+  .second-screen_h2,
+  .second-screen_line,
+  .head-container_item:last-child {
+    display: none;
+  }
+  .second-screen_h1,
+  .second_screen, h1, h2 {
+    font-size: 16px;
+    color: black;
+    height: 23px;
+    width: fit-content;
+    margin:0 auto ;
+  }
+  .head-container {
+    margin-bottom: 0;
+  }
+  table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-radius: 10px;
+    border-spacing: 0;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  th {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    text-shadow: unset;
+    padding: 10px 20px;
+  }
+  th,
+  td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: rgb(0, 0, 0);
+  }
+  td {
+  padding: 10px 20px;
+  background: #ffffff;
+}
 }

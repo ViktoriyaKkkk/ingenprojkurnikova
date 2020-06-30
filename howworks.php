@@ -123,6 +123,47 @@ if (isset($_POST['button']) && $_POST['button']== 'Delete request') {
     echo '<h3 class="howitworks_h3 form_h3">Request with number '.$_POST['dnumber'].' has been deleted</h3>';
 }
 ?>
+<h1 class="howitworks_count">5</h1>
+            <h3 class="howitworks_h3">If you have already placed an order, you can view your contract and sales details below.</h3>
+                <h3 class="howitworks_h3"> Just enter your order number into following form.</h3>
+                <form action="/?site=howworks#form_view" class="edit_req" method="POST" id="form_view">
+                <h2 class="leave-req">View order details</h2>
+                <label for="vnumber">Order number:
+                    <input type="text" id="vnumber" name="vnumber" class="form_inp">
+                </label>
+                <input type="submit" name="button" value="View details" class="form_but">
+            </form>
+            <?php 
+if (isset($_POST['button']) && $_POST['button']== 'View details') {
+    $connect = pg_connect("host=ec2-54-247-89-181.eu-west-1.compute.amazonaws.com port=5432 dbname=deo7p7fsv4n4rd user=gqiwqlespsoxlu password=06d89e66430fe535de320a681dd536e2c9cd4cdb47f16957c899f8ecfb032ef7")
+ or die('Не удалось соединиться: '.pg_last_error($connect));
+    // формируем и выполняем SQL-запрос для добавления записи
+    $query_view=pg_query($connect, "SELECT * FROM furniture_store.contract WHERE order_no=".$_POST['vnumber']);
+$ret='<table><tr><th>Order No</th><th>Customer Id</th><th>Delivery Id</th><th>Date of registration</th><th>Date of execute</th><th>Total amount</th></tr>';
+while ($row = pg_fetch_array($query_view, null, PGSQL_ASSOC)) { // пока роу не 0
+                 $ret.='<tr>
+ <td>'.$row['order_no'].'</td>
+ <td>'.$row['customer_id'].'</td>
+ <td>'.$row['delivery_id'].'</td>
+ <td>'.$row['date_registrate'].'</td>
+ <td>'.$row['date_execute'].'</td>
+ <td>'.$row['total_amount'].'</td></tr>';
+             }
+             $ret.='</table>';
+             echo $ret;
+             $query_view=pg_query($connect, "SELECT selling_id, furniture_model, quantity, amount FROM furniture_store.selling WHERE order_no=".$_POST['vnumber']);
+$ret='<table><tr><th>Selling Id</th><th>Furniture_model</th><th>Quantity</th><th>Amount</th></tr>';
+while ($row = pg_fetch_array($query_view, null, PGSQL_ASSOC)) { // пока роу не 0
+                 $ret.='<tr>
+ <td>'.$row['selling_id'].'</td>
+ <td>'.$row['furniture_model'].'</td>
+ <td>'.$row['quantity'].'</td>
+ <td>'.$row['amount'].'</td></tr>';
+             }
+             $ret.='</table>';
+             echo $ret;
+}
+?>
         </div>
     </main>
     <footer>

@@ -66,10 +66,11 @@
             </div>
             <div class="main_providers">
             <?php 
+            if (isset($_GET['category'])) {
 $connect = pg_connect("host=ec2-54-247-89-181.eu-west-1.compute.amazonaws.com port=5432 dbname=deo7p7fsv4n4rd user=gqiwqlespsoxlu password=06d89e66430fe535de320a681dd536e2c9cd4cdb47f16957c899f8ecfb032ef7")
  or die('Не удалось соединиться: '.pg_last_error($connect));
 $query_read=pg_query($connect, "SELECT * FROM furniture_store.furniture WHERE furniture_name='".$_GET['category']."'");
-$ret='<table id="categor"><tr><th>Model</th><th>Category</th><th>Characteristic</th><th>Price</th><th>Quantity</th></tr>';
+$ret='<h3 class="howitworks_h3">Data for the selected category:</h3><table id="categor"><tr><th>Model</th><th>Category</th><th>Characteristic</th><th>Price</th><th>Quantity</th></tr>';
 while ($row = pg_fetch_array($query_read, null, PGSQL_ASSOC)) { // пока роу не 0
                  $ret.='<tr>
  <td>'.$row['furniture_model'].'</td>
@@ -77,6 +78,24 @@ while ($row = pg_fetch_array($query_read, null, PGSQL_ASSOC)) { // пока ро
  <td>'.$row['characteristic'].'</td>
  <td>'.$row['price'].'</td>
  <td>'.$row['quantity_available'].'</td>
+ </tr>';
+             }
+             $ret.='</table>';
+             echo $ret;
+            }
+?>
+<h3 class="howitworks_h3">Before you place an order, check out our delivery methods.</h3>
+<?php 
+$connect = pg_connect("host=ec2-54-247-89-181.eu-west-1.compute.amazonaws.com port=5432 dbname=deo7p7fsv4n4rd user=gqiwqlespsoxlu password=06d89e66430fe535de320a681dd536e2c9cd4cdb47f16957c899f8ecfb032ef7")
+ or die('Не удалось соединиться: '.pg_last_error($connect));
+$query_read=pg_query($connect, "SELECT * FROM furniture_store.delivery");
+$ret='<table><tr><th>Deliveri ID</th><th>Location</th><th>Duration</th><th>Price</th></tr>';
+while ($row = pg_fetch_array($query_read, null, PGSQL_ASSOC)) { // пока роу не 0
+                 $ret.='<tr>
+ <td>'.$row['delivery_id'].'</td>
+ <td>'.$row['delivery_location'].'</td>
+ <td>'.$row['delivery_duration'].'</td>
+ <td>'.$row['delivery_price'].'</td>
  </tr>';
              }
              $ret.='</table>';
