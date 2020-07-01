@@ -10,7 +10,7 @@
   
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <title>Document</title>
-    <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
 
 <script type="text/javascript">
 	$(document).ready(function () {
