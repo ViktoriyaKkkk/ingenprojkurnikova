@@ -1,4 +1,4 @@
 <?php
-if (!isset($_GET['site'])) include 'home.php';
-else include $_GET['site'].'.php';
+if (!isset($_GET['site'])) include 'moduls/home.php';
+else include 'moduls/'.$_GET['site'].'.php';
 ?>
