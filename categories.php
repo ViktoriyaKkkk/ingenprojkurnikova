@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="mebel shop by Kurnikova Viktoria">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <title>Document</title>
@@ -89,7 +90,7 @@ while ($row = pg_fetch_array($query_read, null, PGSQL_ASSOC)) { // пока ро
 $connect = pg_connect("host=ec2-54-247-89-181.eu-west-1.compute.amazonaws.com port=5432 dbname=deo7p7fsv4n4rd user=gqiwqlespsoxlu password=06d89e66430fe535de320a681dd536e2c9cd4cdb47f16957c899f8ecfb032ef7")
  or die('Не удалось соединиться: '.pg_last_error($connect));
 $query_read=pg_query($connect, "SELECT * FROM furniture_store.delivery");
-$ret='<table><tr><th>Deliveri ID</th><th>Location</th><th>Duration</th><th>Price</th></tr>';
+$ret='<table id="delivery_form"><tr><th>Deliveri ID</th><th>Location</th><th>Duration</th><th>Price</th></tr>';
 while ($row = pg_fetch_array($query_read, null, PGSQL_ASSOC)) { // пока роу не 0
                  $ret.='<tr>
  <td>'.$row['delivery_id'].'</td>

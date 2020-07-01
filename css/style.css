@@ -13,7 +13,7 @@ html {
   align-content: center;
 }
 .head-container_item {
-  font-weight: "Nunito";
+  font-family: "Nunito";
   font-weight: 400;
   font-weight: bold;
 }
@@ -45,6 +45,7 @@ html {
   text-decoration: none;
   line-height: 50px;
   margin-right: 48px;
+  padding-bottom: 28px;
 }
 .menu-container_item:last-child {
   margin-right: 0;
@@ -101,7 +102,6 @@ a {
 .second-screen_line {
   width: 316px;
   height: 0;
-  size: 5;
   background-color: black;
   margin: 0;
   float: left;
@@ -174,7 +174,6 @@ a {
 .second-screen_line-two {
   width: 98px;
   height: 0;
-  size: 5;
   background-color: black;
   margin: 0;
   float: left;
@@ -196,7 +195,6 @@ a {
 .second-screen_line-three {
   width: 200px;
   height: 0;
-  size: 5;
   background-color: black;
   margin: 0;
   float: left;
@@ -664,6 +662,16 @@ label {
   .column-head {
     font-size: 24px;
   }
+  .howitworks{
+    width: 70vw;
+  }
+  .howitworks_h1{
+      font-size: 22px;
+  }
+  .howitworks_h3{
+      font-size: 16px;
+  }
+
 }
 /* версия для печати страницы About Us */
 @media print {
@@ -697,6 +705,7 @@ label {
     color: rgb(0, 0, 0);
     text-shadow: unset;
     padding: 10px 20px;
+    border: unset;
   }
   th,
   td {
@@ -707,5 +716,9 @@ label {
   td {
   padding: 10px 20px;
   background: #ffffff;
+  border: unset;
+}
+footer, .footer_container{
+    display: none;
 }
 }
