@@ -6,8 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="mebel shop by Kurnikova Viktoria">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+            $('.button').hover(function () {
+                $('.button').addClass('animate__animated animate__jello');  // Добавляем класс bounce
+            }, function () {
+                $('.button').removeClass('animate__animated animate__jello');  // Убираем класс bounce
+            }
+            )
+        });
+        $(document).ready(function () {
+            $('.button2').hover(function () {
+                $('.button2').addClass('animate__animated animate__jello');  // Добавляем класс bounce
+            }, function () {
+                $('.button2').removeClass('animate__animated animate__jello');  // Убираем класс bounce
+            }
+            )
+        });</script>
 </head>
 
 <body>
@@ -19,7 +39,7 @@
             <a href="/?site=howworks" class="menu-container_item">How it works</a>
             <a href="/?site=categories" class="menu-container_item selected">Categories</a>
         </div>
-        <a href="#">
+        <a href="/?site=home" class="button">
             <div class="head-container_item">SIGN UP</div>
         </a>
     </header>
@@ -113,23 +133,23 @@ while ($row = pg_fetch_array($query_read, null, PGSQL_ASSOC)) { // пока ро
             </div>
             <div class="footer_container_item">
                 <p class="column-heading">Product</p>
-                <p class="column-item"><a href="#">Furnitures</a></p>
-                <p class="column-item"><a href="#">Delivery</a></p>
+                <p class="column-item"><a href="/?site=categories">Furnitures</a> </p>
+                <p class="column-item"><a href="/?site=categories#delivery_form">Delivery</a></p>
             </div>
             <div class="footer_container_item">
                 <p class="column-heading">Resources</p>
-                <p class="column-item"><a href="#">Blog</a></p>
-                <p class="column-item"><a href="#">Delivery</a></p>
+                <p class="column-item"><a href="/?site=home">Blog</a></p>
+                <p class="column-item"><a href="/?site=home">News</a></p>
             </div>
             <div class="footer_container_item">
                 <p class="column-heading">Company</p>
-                <p class="column-item"><a href="#">About Us</a></p>
-                <p class="column-item"><a href="#">Our Team</a></p>
+                <p class="column-item"><a href="/?site=aboutus">About Us</a></p>
+                <p class="column-item"><a href="/?site=aboutus">Our Team</a></p>
             </div>
             <div class="footer_container_item">
                 <p class="column-heading">Follow Us</p>
-                <p class="column-item"><a href="#">Instagram</a></p>
-                <p class="column-item"><a href="#">Twitter</a></p>
+                <p class="column-item"><a href="https://www.instagram.com/">Instagram</a></p>
+                <p class="column-item"><a href="https://twitter.com/explore">Twitter</a></p>
             </div>
         </div>
     </footer>

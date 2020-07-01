@@ -115,35 +115,35 @@
                 <div class="categories_item cat_table">
                     <p class="categories_item_name">Table</p>
                     <img src="img/desk.png" alt="brown desk" class="categories_item_table">
-                    <a href="#">
+                    <a href="/?site=categories&category=Стол#categor">
                         <div class="categories_item_but">Show Now</div>
                     </a>
                 </div>
                 <div class="categories_item cat_chair">
                     <p class="categories_item_name">Chair</p>
                     <img src="img/chair.png" alt="brown desk" class="categories_item_chair">
-                    <a href="#">
+                    <a href="/?site=categories&category=Стул#categor">
                         <div class="categories_item_but">Show Now</div>
                     </a>
                 </div>
                 <div class="categories_item cat_bedtable">
                     <p class="categories_item_name">Bedside table</p>
                     <img src="img/bedside_table.png" alt="brown desk" class="categories_item_bedtable">
-                    <a href="#">
+                    <a href="/?site=categories&category=Тумбочка#categor">
                         <div class="categories_item_but">Show Now</div>
                     </a>
                 </div>
                 <div class="categories_item cat_closet">
                     <p class="categories_item_name">Closet</p>
                     <img src="img/closet.png" alt="brown desk" class="categories_item_closet">
-                    <a href="#">
+                    <a href="/?site=categories&category=Шкаф#categor">
                         <div class="categories_item_but">Show Now</div>
                     </a>
                 </div>
                 <div class="categories_item cat_bed">
                     <p class="categories_item_name">Bed</p>
                     <img src="img/bed.png" alt="brown desk" class="categories_item_bed">
-                    <a href="#">
+                    <a href="/?site=categories&category=Кровать#categor">
                         <div class="categories_item_but">Show Now</div>
                     </a>
                 </div>
