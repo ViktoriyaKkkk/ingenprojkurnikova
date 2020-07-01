@@ -10,9 +10,9 @@
   
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <title>Document</title>
-    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
 
-<script type="text/javascript">
+<script>
 	$(document).ready(function () {
             $('.button').hover(function () {
                 $('.button').addClass('animate__animated animate__jello');  // Добавляем класс bounce
